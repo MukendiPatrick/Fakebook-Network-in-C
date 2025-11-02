@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define NETWORK_CAPACITY 100
+#define FRIEND_CAPACITY 99
+
+typedef struct Post
+{
+    int id;
+    char *content;
+    struct Post *next; // linked list of posts
+} Post;
+
+typedef struct User
+{
+    int id;
+    char name[50];
+    struct User **friends; // dynamic array of User* (adjacency list)
+    int numFriends;
+    int friendCapacity;
+    Post *posts; // linked list of posts
+} User;
+
+typedef struct Network
+{
+    User **users; // dynamic array of all users
+    int numUsers;
+    int capacity;
+} Network;
+
+Network *createNetwork();
+User *createUser(Network *net, const char *name);
+void addFriend(User *u1, User *u2);
+void addPost(User *user, const char *content);
+void showFriends(User *user);
+void showFeed(User *user);
+void displayNetwork(Network *net);
+void freeNetwork(Network *net);
+
+// ###### BONUS: ######
+// Suggest new friends using friends-of-friends(via BFS).
+void suggestFriends(User *user);
+// Return number of connected components.
+// int countComponents(Network *net);
