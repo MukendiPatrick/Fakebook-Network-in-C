@@ -6,12 +6,12 @@ A graph-driven social app built in C lets people link up, share posts, and explo
 #### Compile:
 
 ```bash
-gcc -Wall -Wextra -Werror main.c fakebook.c -o fakebook
+gcc -Wall -Wextra -Werror main.c fakebook.c -o fakebook.o
 ```
 #### Run
 
 ```bash
-./fakebook
+./fakebook.o
 ```
 
 ## Menu Option
