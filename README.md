@@ -6,7 +6,7 @@ A graph-driven social app built in C lets people link up, share posts, and explo
 #### Compile:
 
 ```bash
-Compile: gcc -Wall -Wextra -Werror main.c fakebook.c -o fakebook
+gcc -Wall -Wextra -Werror main.c fakebook.c -o fakebook
 ```
 #### Run
 
